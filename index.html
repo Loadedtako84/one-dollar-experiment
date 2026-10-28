@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="A simple, voluntary internet experiment: Could I get $1 just because?">
+<title>The $1 Experiment — Could I get $1 just because?</title>
+<style>
+:root{--ink:#101114;--gold:#ffcc27;--paper:#fff;--muted:#626879;--soft:#f4f5f8;--line:#e6e8ee}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:#fff;line-height:1.55}
+a{color:inherit}.wrap{width:min(1120px,calc(100% - 40px));margin:auto}
+header{background:#0d0e10;color:#fff;border-bottom:1px solid #27282b}.nav{display:flex;align-items:center;justify-content:space-between;gap:18px;min-height:76px}.brand{display:flex;align-items:center;gap:10px;font-weight:850;font-size:1.1rem;text-decoration:none}.coin{display:inline-grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--gold);color:#111;font-weight:900;font-size:1.35rem;box-shadow:0 0 0 4px #ffcc2720}.navlinks{display:flex;align-items:center;gap:24px}.navlinks a{text-decoration:none;color:#e7e7e7;font-size:.92rem}.navlinks a:hover{color:var(--gold)}.btn{display:inline-flex;justify-content:center;align-items:center;gap:9px;padding:13px 20px;border-radius:13px;border:1px solid transparent;text-decoration:none;font-weight:800;cursor:pointer;font:inherit;font-weight:800;transition:transform .15s,filter .15s}.btn:hover{transform:translateY(-1px);filter:brightness(1.03)}.btn-gold{background:var(--gold);color:#111}.btn-outline{border-color:#777;background:transparent;color:#fff}.hero{background:radial-gradient(circle at 78% 44%,#6e4d0e66,transparent 25%),linear-gradient(120deg,#0d0e10,#161719);color:white;padding:74px 0 68px;overflow:hidden}.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:42px;align-items:center}.eyebrow{color:var(--gold);text-transform:uppercase;letter-spacing:.18em;font-size:.8rem;font-weight:900}.hero h1{font-size:clamp(2.7rem,6vw,5.5rem);line-height:.99;letter-spacing:-.055em;margin:15px 0 22px;max-width:680px}.hero p{color:#dedfe3;font-size:1.12rem;max-width:560px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:27px}.fine{font-size:.82rem!important;color:#aeb1ba!important;margin-top:15px}.coin-art{display:grid;place-items:center;min-height:300px;position:relative}.bigcoin{width:min(290px,70vw);aspect-ratio:1;border-radius:50%;display:grid;place-items:center;color:#6b4300;font-size:7rem;font-weight:950;background:radial-gradient(circle at 32% 25%,#fff4b0,#ffcf35 26%,#c88909 56%,#ffe77c 72%,#9d6400);border:8px ridge #f7d46a;box-shadow:0 0 55px #ffbd2b55,inset 0 0 0 8px #ffe58a66,inset 0 0 35px #8d5600;transform:rotate(-12deg);text-shadow:0 2px 1px #fff5b3}.orbit{position:absolute;width:330px;height:330px;border:1px solid #ffcc2744;border-radius:50%;transform:rotate(25deg)}.features{padding:45px 0 25px;display:grid;grid-template-columns:repeat(4,1fr);gap:26px}.feature .icon{display:grid;place-items:center;background:var(--gold);border-radius:50%;width:48px;height:48px;font-size:1.4rem;margin-bottom:12px}.feature h3{margin:0 0 7px;font-size:1.1rem}.feature p{margin:0;color:#555e70;font-size:.95rem}.panel{background:#f5f6f9;border:1px solid #eff0f3;border-radius:18px;padding:25px;margin:20px 0 28px;display:grid;grid-template-columns:1.2fr 1fr;gap:28px}.panel h2{font-size:1.25rem;margin:0 0 15px}.stats{display:grid;grid-template-columns:repeat(3,1fr);background:white;border:1px solid var(--line);border-radius:13px;padding:18px 10px;text-align:center}.stat strong{display:block;font-size:1.7rem;letter-spacing:-.04em}.stat span{font-size:.82rem;color:var(--muted)}.bar{height:9px;background:#e6e8ef;border-radius:99px;margin:18px 4px 8px;overflow:hidden}.bar span{display:block;width:0%;height:100%;background:var(--gold)}.subnote{font-size:.8rem;color:var(--muted)}.why{border-left:1px solid #d9dce5;padding-left:28px}.why p{color:#51596a}.shareband{background:#fff8e5;border:1px solid #fff0c2;border-radius:16px;padding:20px 24px;margin:0 0 40px;display:flex;align-items:center;justify-content:space-between;gap:18px}.shareband h3{margin:0 0 3px}.shareband p{margin:0;color:#555e70;font-size:.92rem}.share-actions{display:flex;gap:9px;flex-wrap:wrap}.smallbtn{background:white;border:1px solid #d9dce5;border-radius:10px;padding:10px 13px;cursor:pointer;font-weight:750}.smallbtn:hover{border-color:#c49a14}footer{background:#101114;color:#c9cbd1;padding:24px 0;font-size:.83rem}footer .foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}footer a{color:#fff;text-decoration:none;margin-left:14px}.notice{margin-top:22px;padding:15px 16px;border-radius:12px;background:#fff8df;border:1px solid #f3df94;color:#57430b;font-size:.92rem}.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#111;color:#fff;padding:11px 16px;border-radius:10px;box-shadow:0 8px 28px #0003;display:none;z-index:9}.toast.show{display:block}
+@media(max-width:760px){.navlinks a:not(.navcta){display:none}.hero{padding:48px 0}.hero-grid{grid-template-columns:1fr;gap:15px}.hero h1{font-size:clamp(2.8rem,13vw,4.5rem)}.coin-art{min-height:230px}.bigcoin{width:210px;font-size:5.5rem}.orbit{width:245px;height:245px}.features{grid-template-columns:repeat(2,1fr);gap:24px 18px}.panel{grid-template-columns:1fr}.why{border-left:0;border-top:1px solid #d9dce5;padding:22px 0 0}.shareband{align-items:flex-start;flex-direction:column}.nav{min-height:68px}.navlinks{gap:10px}.navcta{padding:10px 12px;font-size:.88rem}}
+@media(max-width:400px){.wrap{width:calc(100% - 28px)}.features{grid-template-columns:1fr}.stats{padding:14px 4px}.stat strong{font-size:1.4rem}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#home"><span class="coin">$</span><span>$1 Experiment</span></a>
+    <nav class="navlinks" aria-label="Main navigation">
+      <a href="#home">Home</a><a href="#about">About</a><a href="#progress">Progress</a><a href="#share">Share</a>
+      <a class="btn btn-gold navcta" href="#contribute">Contribute $1</a>
+    </nav>
+  </div>
+</header>
+<main>
+<section class="hero" id="home">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">The one-dollar internet experiment</div>
+      <h1>Could I get $1 just because?</h1>
+      <p>No sob story. No fake emergency. No complicated explanation. Just a simple question for the internet.</p>
+      <div class="actions">
+        <a class="btn btn-gold" href="#contribute">◉ &nbsp; Contribute $1</a>
+        <button class="btn btn-outline" id="heroShare" type="button">↗ &nbsp; Share</button>
+      </div>
+      <p class="fine">Every contribution is optional. Sharing the experiment is welcome, too.</p>
+    </div>
+    <div class="coin-art" aria-label="Illustration of a golden dollar coin"><div class="orbit"></div><div class="bigcoin">$</div></div>
+  </div>
+</section>
+<section class="wrap features" id="about">
+  <article class="feature"><div class="icon">◎</div><h3>A global experiment</h3><p>I'm asking people around the world one simple question: how far can a single dollar go?</p></article>
+  <article class="feature"><div class="icon">♧</div><h3>No pressure</h3><p>You're not obligated to contribute. Sharing the experiment is just as welcome.</p></article>
+  <article class="feature"><div class="icon">♡</div><h3>100% transparent</h3><p>Progress should reflect verified contributions—not invented numbers or hype.</p></article>
+  <article class="feature"><div class="icon">☺</div><h3>Just curiosity</h3><p>This is a personal fundraising experiment, not a charity or an investment.</p></article>
+</section>
+<section class="wrap panel" id="progress">
+  <div>
+    <h2>▥ &nbsp; Live Progress</h2>
+    <div class="stats">
+      <div class="stat"><strong id="contributors">0</strong><span>Contributors</span></div>
+      <div class="stat"><strong id="raised">$0</strong><span>Total raised</span></div>
+      <div class="stat"><strong id="countries">0</strong><span>Countries</span></div>
+    </div>
+    <div class="bar"><span id="progressBar"></span></div>
+    <div class="subnote">First milestone: 100 contributors · <span id="goalCount">0 / 100</span></div>
+  </div>
+  <div class="why">
+    <h2>☼ &nbsp; Why $1?</h2>
+    <p>A dollar may not seem like much, but small contributions can add up. The real question is how many people will choose to take part.</p>
+    <p><strong>It all starts with one question.</strong></p>
+    <p style="font-size:1.25rem;font-weight:850;font-style:italic;background:#ffda61;display:inline;padding:4px 10px;border-radius:8px">Could I get $1 just because?</p>
+  </div>
+</section>
+<section class="wrap" id="contribute">
+  <div class="panel" style="grid-template-columns:1fr 1fr;align-items:center">
+    <div><h2>Want to be part of the experiment?</h2><p>Contributions are voluntary. If you don't want to contribute, sharing the page is just as appreciated.</p></div>
+    <div>
+      <button class="btn btn-gold" style="width:100%" id="donateButton" type="button">Contribution link coming soon</button>
+      <div class="notice"><strong>Not live yet:</strong> the payment button must be connected to the organizer's verified payment account before accepting contributions. No payments are being collected by this demo.</div>
+    </div>
+  </div>
+</section>
+<section class="wrap shareband" id="share">
+  <div><h3>➤ &nbsp; Help spread the word</h3><p>Not in a position to contribute? No problem. Sharing the experiment helps it travel.</p></div>
+  <div class="share-actions">
+    <button class="smallbtn" id="copyLink" type="button">▣ Copy page link</button>
+    <button class="smallbtn" id="shareNative" type="button">↗ Share</button>
+    <a class="smallbtn" href="https://www.reddit.com/submit" target="_blank" rel="noopener noreferrer">Reddit</a>
+  </div>
+</section>
+</main>
+<footer><div class="wrap foot"><div><strong>The $1 Experiment</strong> &nbsp; | &nbsp; Personal fundraising experiment · Not a charity</div><div><a href="#about">About</a><a href="#privacy">Privacy</a><a href="mailto:REPLACE-WITH-YOUR-EMAIL">Contact</a></div></div><div class="wrap subnote" id="privacy" style="color:#9ea2ac;margin-top:14px">Before launch, add the organizer's contact details and a privacy notice that matches the actual data collected. This demo does not collect or store visitor information.</div></footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script>
+const toast=document.getElementById('toast');
+
+/*
+  PAYMENT SETUP — not connected yet.
+  When you're ready, create a payment link with your chosen provider,
+  then paste that provider's payment URL between the quotes below.
+  Do not paste passwords, secret API keys, or bank details here.
+*/
+const PAYMENT_LINK = "https://cash.app/pay/link/laazqn2w";
+
+const donateButton = document.getElementById('donateButton');
+if (PAYMENT_LINK.trim()) {
+  donateButton.textContent = "Contribute $1";
+  donateButton.addEventListener('click', () => {
+    window.open(PAYMENT_LINK, '_blank', 'noopener,noreferrer');
+  });
+} else {
+  donateButton.addEventListener('click', () => {
+    showToast('Payments are not set up yet. No money has been collected.');
+  });
+}
+
+function showToast(message){toast.textContent=message;toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),2600)}
+async function sharePage(){
+ const data={title:'The $1 Experiment',text:'Could I get $1 just because? A simple, voluntary internet experiment.',url:location.href};
+ if(navigator.share){try{await navigator.share(data)}catch(e){}}
+ else {try{await navigator.clipboard.writeText(location.href);showToast('Page link copied.')}catch(e){showToast('Copy the page URL from your browser address bar.')}}
+}
+document.getElementById('heroShare').addEventListener('click',sharePage);
+document.getElementById('shareNative').addEventListener('click',sharePage);
+document.getElementById('copyLink').addEventListener('click',async()=>{
+ try{await navigator.clipboard.writeText(location.href);showToast('Page link copied.')}
+ catch(e){showToast('Copy the page URL from your browser address bar.')}
+});
+</script>
+</body>
+</html>
